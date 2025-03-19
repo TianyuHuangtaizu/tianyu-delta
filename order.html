@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>订单确认</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="order-container">
+        <h2 id="service-title"></h2>
+        <form id="order-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="YOUR_API_KEY">
+            
+            <label>游戏ID:</label>
+            <input type="text" name="game_id" required>
+            
+            <label>联系QQ:</label>
+            <input type="tel" name="qq" required>
+            
+            <button type="submit">生成支付</button>
+        </form>
+        
+        <div class="payment-qr">
+            <img id="qr-code" src="" alt="支付二维码">
+        </div>
+    </div>
+
+    <script>
+        // 获取服务ID
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceId = urlParams.get('service');
+        
+        // 显示服务名称
+        document.getElementById('service-title').textContent = 
+            `您选择的服务：${decodeURIComponent(serviceId)}`;
+
+        // 配置Web3Forms（需注册后替换API KEY）
+    </script>
+</body>
+</html>
