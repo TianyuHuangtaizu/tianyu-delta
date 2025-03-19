@@ -1,0 +1,17 @@
+{
+    "services": [
+        {
+            "id": "boost-1",
+            "name": "钻石→王者段位",
+            "price": 299,
+            "time": "48小时",
+            "hot": true
+        },
+        {
+            "id": "coach-1", 
+            "name": "1对1战术指导",
+            "price": 150,
+            "time": "按小时计费"
+        }
+    ]
+}
